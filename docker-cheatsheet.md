@@ -35,6 +35,9 @@ List the running containers (add --all to include stopped containers)  </br>
 
 Delete all running and stopped containers </br>
 `docker container rm -f $(docker ps -aq)`
+
+Delete docker image
+`docker image rm image ${image_id}`
 </br>
 
 ## Share
