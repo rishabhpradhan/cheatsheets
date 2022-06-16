@@ -1,7 +1,7 @@
-### Docker cheatsheet
+# Docker cheatsheet
 
 
-#### Build
+## Build
 Build an image from the Dockerfile in thecurrent directory and tag the image </br>
 `docker build -t myimage:1.0 .`
 
@@ -17,7 +17,7 @@ Start a new CONTAINER from IMAGE </br>
 `docker run ngix`
 </br>
 
-#### Run
+## Run
 Run a container from the Alpine version 3.9 image, name the running container “web” and expose port 5000 externally,mapped to port 80 inside the container </br>
 `docker container run --name web -p 5000:80 alpine:3.9`
 
@@ -35,9 +35,12 @@ List the running containers (add --all to include stopped containers)  </br>
 
 Delete all running and stopped containers </br>
 `docker container rm -f $(docker ps -aq)`
+
+Delete docker image
+`docker image rm image ${image_id}`
 </br>
 
-#### Share
+## Share
 Pull an image from a registry </br>
 `docker pull myimage:1.0`
 
